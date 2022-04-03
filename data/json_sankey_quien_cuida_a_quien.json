@@ -1,26 +1,30 @@
 {
     "nodes":[
-        {"node":0,"name":"H<65"},
-        {"node":1,"name":"H65+"},
-        {"node":2,"name":"M<65"},
-        {"node":3,"name":"M65+"}
+        {"node":0,"name":"H<65_cuida"},
+        {"node":1,"name":"H65+_cuida"},
+        {"node":2,"name":"M<65_cuida"},
+        {"node":3,"name":"M65+_cuida"},
+        {"node":4,"name":"H<65_es_cuidado"},
+        {"node":5,"name":"H65+_es_cuidado"},
+        {"node":6,"name":"M<65_es_cuidado"},
+        {"node":7,"name":"M65+_es_cuidado"}
     ],
     "links":[
-        {"source":0,"target":0,"value":429.282},
-        {"source":0,"target":1,"value":43.596},
-        {"source":0,"target":2,"value":461.58},
-        {"source":0,"target":3,"value":1224.937},
-        {"source":1,"target":0,"value":228.228},
-        {"source":1,"target":1,"value":134.232},
-        {"source":1,"target":2,"value":206.78},
-        {"source":1,"target":3,"value":1060.696},
-        {"source":2,"target":0,"value":1120.1365},
-        {"source":2,"target":1,"value":1560.188},
-        {"source":2,"target":2,"value":436.0965},
-        {"source":2,"target":3,"value":2426.4625},
-        {"source":3,"target":0,"value":133.644},
-        {"source":3,"target":1,"value":1084.594},
-        {"source":3,"target":2,"value":210.084},
-        {"source":3,"target":3,"value":680.631}
+        {"source":0,"target":4,"value":429.282},
+        {"source":0,"target":5,"value":43.596},
+        {"source":0,"target":6,"value":461.58},
+        {"source":0,"target":7,"value":1224.937},
+        {"source":1,"target":4,"value":228.228},
+        {"source":1,"target":5,"value":134.232},
+        {"source":1,"target":6,"value":206.78},
+        {"source":1,"target":7,"value":1060.696},
+        {"source":2,"target":4,"value":1120.1365},
+        {"source":2,"target":5,"value":1560.188},
+        {"source":2,"target":6,"value":436.0965},
+        {"source":2,"target":7,"value":2426.4625},
+        {"source":3,"target":4,"value":133.644},
+        {"source":3,"target":5,"value":1084.594},
+        {"source":3,"target":6,"value":210.084},
+        {"source":3,"target":7,"value":680.631}
     ]
 }
