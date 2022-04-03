@@ -136,6 +136,15 @@ body, button {
             
                 color: #A3A3A3;
             }
+
+            //En este caso:
+            .sankey-text {
+                font-family: 'Titilium web';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 10px;
+            }
             
             & .tick line {
                 stroke: #F0F0F0;

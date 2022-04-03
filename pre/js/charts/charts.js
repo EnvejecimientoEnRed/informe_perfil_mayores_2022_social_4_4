@@ -23,7 +23,7 @@ export function initChart(iframe) {
     d3.json('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/informe_perfil_mayores_2022_social_4_4/main/data/json_sankey_quien_cuida_a_quien.json', function(error,data) {
         if (error) throw error;
 
-        let margin = {top: 10, right: 5, bottom: 10, left: 5},
+        let margin = {top: 0, right: 0, bottom: 0, left: 0},
             width = document.getElementById('chart').clientWidth - margin.left - margin.right,
             height = document.getElementById('chart').clientHeight - margin.top - margin.bottom;
 
@@ -35,8 +35,8 @@ export function initChart(iframe) {
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         let sankey = d3.sankey()
-            .nodeWidth(15)
-            .nodePadding(10)
+            .nodeWidth(20)
+            .nodePadding(5)
             .extent([[1, 1], [width - 1, height - 6]]);
 
         let link = svg.append("g")
@@ -77,14 +77,15 @@ export function initChart(iframe) {
                 .attr("y", function(d) { return d.y0; })
                 .attr("height", function(d) { return d.y1 - d.y0; })
                 .attr("width", function(d) { return d.x1 - d.x0; })
-                .attr("fill", function(d) { console.log(d); return 'red'; });
+                .attr("fill", function(d) { return color(d.name); });
 
-            node.append("text")
+            node.append("text")            
+                .attr('class','sankey-text')
                 .attr("x", function(d) { return d.x0 - 6; })
                 .attr("y", function(d) { return (d.y1 + d.y0) / 2; })
                 .attr("dy", "0.35em")
                 .attr("text-anchor", "end")
-                .text(function(d) { return d.name; })
+                .text(function(d) { return d.name + ' (' + d.value + ')'; })
                 .filter(function(d) { return d.x0 < width / 2; })
                 .attr("x", function(d) { return d.x1 + 6; })
                 .attr("text-anchor", "start");
@@ -97,11 +98,6 @@ export function initChart(iframe) {
         /////
         /////
         init();
-
-        //Animación del gráfico
-        document.getElementById('replay').addEventListener('click', function() {
-            animateChart();
-        });
 
         /////
         /////
