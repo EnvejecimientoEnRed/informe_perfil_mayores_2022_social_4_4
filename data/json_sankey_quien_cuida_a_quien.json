@@ -1,13 +1,13 @@
 {
     "nodes":[
-        {"node":0,"name":"H<65_cuida"},
-        {"node":1,"name":"H65+_cuida"},
-        {"node":2,"name":"M<65_cuida"},
-        {"node":3,"name":"M65+_cuida"},
-        {"node":4,"name":"H<65_es_cuidado"},
-        {"node":5,"name":"H65+_es_cuidado"},
-        {"node":6,"name":"M<65_es_cuidado"},
-        {"node":7,"name":"M65+_es_cuidado"}
+        {"node":0,"name":"Hombres < 65"},
+        {"node":1,"name":"Hombres 65+"},
+        {"node":2,"name":"Mujeres < 65"},
+        {"node":3,"name":"Mujeres 65+"},
+        {"node":4,"name":"Hombres < 65"},
+        {"node":5,"name":"Hombres 65+"},
+        {"node":6,"name":"Mujeres < 65"},
+        {"node":7,"name":"Mujeres 65+"}
     ],
     "links":[
         {"source":0,"target":4,"value":429.282},
