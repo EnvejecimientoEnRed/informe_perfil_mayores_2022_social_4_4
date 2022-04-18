@@ -2,7 +2,7 @@
 import { numberWithCommas2 } from '../helpers';
 //import { getInTooltip, getOutTooltip, positionTooltip } from './modules/tooltip';
 import { setChartHeight } from '../modules/height';
-import { setChartCanvas, setChartCanvasImage, setCustomCanvas, setChartCustomCanvasImage } from '../modules/canvas-image';
+import { setChartCanvas, setChartCanvasImage } from '../modules/canvas-image';
 import { setRRSSLinks } from '../modules/rrss';
 import { setFixedIframeUrl } from './chart_helpers';
 
@@ -59,7 +59,6 @@ export function initChart(iframe) {
             .range([COLOR_PRIMARY_1, COLOR_COMP_2, COLOR_COMP_1, COLOR_OTHER_1]);
 
         function init() {
-
             link = link
                 .data(data.links)
                 .enter()
@@ -113,13 +112,11 @@ export function initChart(iframe) {
 
         //Captura de pantalla de la visualización
         setChartCanvas();
-        setCustomCanvas();
 
         let pngDownload = document.getElementById('pngImage');
 
         pngDownload.addEventListener('click', function(){
             setChartCanvasImage('patrones_cuidado_informal');
-            setChartCustomCanvasImage('patrones_cuidado_informal');
         });
 
         //Altura del frame
