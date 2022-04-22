@@ -38,7 +38,7 @@ export function initChart(iframe) {
             .attr("class", "links")
             .attr("fill", "none")
             .attr("stroke", "#000")
-            .attr("stroke-opacity", 0.5)
+            .attr("stroke-opacity", 0.25)
             .selectAll("path");
 
         let node = svg.append("g")
@@ -63,8 +63,6 @@ export function initChart(iframe) {
                 .attr("stroke-width", function(d) { return Math.max(1, d.width); })
                 .attr('stroke', function(d) { return color(d.source.name); })
                 .on('mouseover', function(d,i,e) {
-                    console.log(d);
-
                     //Opacidad del link señalado
                     this.style.strokeOpacity = 1;
 
@@ -86,7 +84,7 @@ export function initChart(iframe) {
                 })
                 .on('mouseout', function(d,i,e) {
                     //Opacidad del link señalado
-                    this.style.strokeOpacity = 0.5;
+                    this.style.strokeOpacity = 0.25;
 
                     //Fuera tooltip
                     getOutTooltip(tooltip);
