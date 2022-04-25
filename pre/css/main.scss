@@ -92,7 +92,8 @@ button {
         &__legend {
             display: flex;
             flex-wrap: wrap;
-            
+
+            width: 100%;
 
             &--item {
                 position: relative;
@@ -135,45 +136,56 @@ button {
 
         //Visualización
         &__viz {
-            height: 540px;
-            margin-top: 8px;
+            height: auto;
+            margin-top: 12px;
 
-            & .tick text {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 12px;
-                line-height: 10px;
-            
-                color: #A3A3A3;
-            }
+            .chart--y_text {
+                display: flex;
+                    justify-content: space-between;
+    
+                    width: 100%;
+            }            
 
-            //En este caso:
-            .sankey-text {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 300;
-                font-size: 14px;
-                line-height: 10px;
-            }
+            .chart--viz {
+                height: 580px;                
 
-            .domain {
-                stroke: #262626;
-                stroke-width: 1px;
-            }
-            
-            & .tick line {
-                stroke: #262626;
-                opacity: 0.7;
-                stroke-dasharray: 5;
-                stroke-width: 0.5px;
-            }
-            
-            & .line-special {
-                stroke: #000 !important;
-                stroke-dasharray: 0 !important;
-                stroke-width: 1px !important;
-            }
+                & .tick text {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 10px;
+                
+                    color: #A3A3A3;
+                }
+
+                //En este caso:
+                .sankey-text {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 10px;
+                }
+
+                .domain {
+                    stroke: #262626;
+                    stroke-width: 1px;
+                }
+                
+                & .tick line {
+                    stroke: #262626;
+                    opacity: 0.7;
+                    stroke-dasharray: 5;
+                    stroke-width: 0.5px;
+                }
+                
+                & .line-special {
+                    stroke: #000 !important;
+                    stroke-dasharray: 0 !important;
+                    stroke-width: 1px !important;
+                }
+            }            
         }
 
         //Pie
@@ -254,7 +266,7 @@ button {
 
     width: auto;
     padding: 0px 6px;
-    font-size: 0.85rem;
+    font-size: 0.85em;
     border-radius: 3px;
 
     &__option {
@@ -319,6 +331,23 @@ button {
         & + .text__header {
             margin-top: 24px;
         }
+    }
+
+    &__yaxis {
+        font-size: 0.8em;
+        line-height: 1.25em;
+        font-weight: 400;
+        color: #262626;
+    }
+
+    &__xaxis {
+        font-size: 0.8em;
+        line-height: 1.25em;
+        font-weight: 400;
+        color: #262626;
+        text-align: center;
+
+        margin-left: 45px;
     }
 }
 
@@ -405,17 +434,27 @@ button {
     position: absolute;
     opacity: 0;   
 
-    width: 135px;
+    width: 160px;
     height: auto;
-    padding: 8px;
+    padding: 2px;
     background-color: #fffaf0;
 
-    &--title {
+    &--title_1 {
         font-style: normal;
         font-weight: 700;
         font-size: 12px;
         line-height: 1.1;
         color: #262626;
+    }
+
+    &--title_2, &--title_3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.1;
+        color: #262626;
+
+        margin-top: 4px;
     }
 
     &--text {

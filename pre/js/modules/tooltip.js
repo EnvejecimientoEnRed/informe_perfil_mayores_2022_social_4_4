@@ -15,9 +15,9 @@ function positionTooltip(event, tooltip) {
 
     //Posición
     let left = window.innerWidth / 2 > x ? 'left' : 'right';
-    let horizontalPos = left == 'left' ? 15 : -150;
+    let horizontalPos = left == 'left' ? 15 : -170;
 
-    tooltip.style('top', y - 50 + 'px');
+    tooltip.style('top', y - 60 + 'px');
     tooltip.style('left', (x + horizontalPos) + 'px');
 }
 
