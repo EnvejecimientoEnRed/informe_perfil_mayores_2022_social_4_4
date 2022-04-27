@@ -13,7 +13,7 @@ COLOR_ANAG__PRIM_1 = '#BA9D5F',
 COLOR_ANAG_COMP_1 = '#1C5A5E';
 let tooltip = d3.select('#tooltip');
 
-export function initChart(iframe) {
+export function initChart() {
     //Desarrollo del gráfico
     d3.json('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/informe_perfil_mayores_2022_social_4_4/main/data/json_sankey_quien_cuida_a_quien.json', function(error,data) {
         if (error) throw error;
@@ -65,8 +65,6 @@ export function initChart(iframe) {
                 .on('mouseover', function(d,i,e) {
                     //Opacidad del link señalado
                     this.style.strokeOpacity = 1;
-
-
 
                     //Texto en tooltip
                     let html = '<p class="chart__tooltip--title_1">Horas de cuidado: ' + numberWithCommas3(parseInt(d.value)) + '</p>' +
@@ -145,7 +143,9 @@ export function initChart(iframe) {
         setRRSSLinks('patrones_cuidado_informal');
 
         //Captura de pantalla de la visualización
-        setChartCanvas();
+        setTimeout(() => {
+            setChartCanvas();
+        }, 2000);
 
         let pngDownload = document.getElementById('pngImage');
 
@@ -154,6 +154,6 @@ export function initChart(iframe) {
         });
 
         //Altura del frame
-        setChartHeight(iframe);
+        setChartHeight();
     });    
 }
