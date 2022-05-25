@@ -15,7 +15,7 @@ let tooltip = d3.select('#tooltip');
 
 export function initChart() {
     //Desarrollo del gráfico
-    d3.json('https://raw.githubusercontent.com/CarlosMunozDiazCSIC/informe_perfil_mayores_2022_social_4_4/main/data/json_sankey_quien_cuida_a_quien.json', function(error,data) {
+    d3.json('https://raw.githubusercontent.com/EnvejecimientoEnRed/informe_perfil_mayores_2022_social_4_4/main/data/json_sankey_quien_cuida_a_quien.json', function(error,data) {
         if (error) throw error;
 
         let margin = {top: 5, right: 0, bottom: 0, left: 0},
